@@ -17,8 +17,8 @@ This project is the base for a new enterprise. The real purpose is hidden to pro
 
 
 ### Demo:
-![demo image](https://github.com/aglaevazz/FairBeans-Webapplication/tree/master/src/main/resources/static/images/home-demo-1.png)
-![demo image](https://github.com/aglaevazz/FairBeans-Webapplication/tree/master/src/main/resources/static/images/home-demo-2.png)
-![demo image](https://github.com/aglaevazz/FairBeans-Webapplication/tree/master/src/main/resources/static/images/home-demo-3.png)
-![demo image](https://github.com/aglaevazz/FairBeans-Webapplication/tree/master/src/main/resources/static/images/home-demo-4.png)
-![demo image](https://github.com/aglaevazz/FairBeans-Webapplication/tree/master/src/main/resources/static/images/partners-demo.png)
+![demo image](/src/main/resources/static/images/home-demo-1.png)
+![demo image](/src/main/resources/static/images/home-demo-2.png)
+![demo image](/src/main/resources/static/images/home-demo-3.png)
+![demo image](src/main/resources/static/images/home-demo-4.png)
+![demo image](/src/main/resources/static/images/partners-demo.png)
