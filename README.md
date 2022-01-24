@@ -1,8 +1,8 @@
-# FairBeans Web-Application *[in development]*
+# FairBeans Web Application *[in development]*
 
 ### Description:
-This is a **web-application** for the **fictive company FairBeans** which distributes fairly traded and biological coffee beans from Colombia.
-The application connects to a database where i.a. distribution partners are stored. Those will be displayed via a Google Maps plugin. 
+This is a web application for the fictitious company FairBeans which distributes biological fair trade coffee beans.
+The application connects to a database where distribution partners are stored. Those will be displayed via a Google Maps plugin. 
 Partners in a specific area will be accessible searching on zip code or city. 
 This project is the base for a new enterprise. The real purpose is hidden to protect the new company until launch.
 
