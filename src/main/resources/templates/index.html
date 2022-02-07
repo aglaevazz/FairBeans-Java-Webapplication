@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license.
+Although you can use them, for a more unique website, replace these images with your own. -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head"></head>
+
+<body>
+
+<!-- Navigation -->
+<nav th:replace="fragments :: my_navigation"></nav>
+
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>FairBeans</h1>
+            <p>Fairness is a delight.</p>
+            <a href="/partners" class="btn btn-primary btn-lg">available stores</a>
+        </div>
+    </div>
+</header>
+
+	<!-- Intro Section -->
+    <section class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                	<span class="glyphicon glyphicon-tree-deciduous" style="font-size: 60px"></span>
+                    <h2 class="section-heading">Help us save our beautiful planet.</h2>
+                    <p class="text-light">We distribute fair, sustainable, and biological coffee from the heart of Colombia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Content 1 -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <img class="img-responsive img-circle center-block" src="/images/dolphin.jpg" alt="">
+                </div>
+                <div class="col-sm-6">
+                	<h2 class="section-header">Sustainable Packaging</h2>
+                	<p class="lead text-muted">Made from 100% recycled plastic from our Oceans. <br>
+                        Our partner forOCEAN makes this possible.</p>
+                	<a href="#" class="btn btn-primary btn-lg">FOR OCEAN</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<!-- Content 2 -->
+     <section class="content content-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                	<h2 class="section-header">The Network</h2>
+                	<p class="lead text-light">Our partners sell our brands in store.</p>
+                	<a href="/partners" class="btn btn-default btn-lg">Show Map</a>
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-responsive img-circle center-block" src="/images/concert.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- Footer -->
+<footer th:replace="fragments :: footer"></footer>
+
+</body>
+
+</html>

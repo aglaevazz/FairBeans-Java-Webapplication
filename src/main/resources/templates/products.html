@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license.
+Although you can use them, for a more unique website, replace these images with your own. -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head"></head>
+
+<body>
+
+<!-- Navigation -->
+<nav th:replace="fragments :: my_navigation"></nav>
+
+    <!-- Intro -->
+    <section class="intro">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <span class="glyphicon glyphicon-gift" style="font-size: 60px"></span>
+                    <h2 class="section-heading">Our Products</h2>
+                    <p class="text-light">Try our delicious and fair beans.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content 1 -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+                <table id="partners">
+                    <tr>
+                        <th>NAME</th>
+                        <th>DESCRIPTION</th>
+                    </tr>
+                    <tr th:each="product : ${products}">
+                        <td th:text="${product.name}">ProductName</td>
+                        <td th:text="${product.description}">ProductDescription</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+<!-- Footer -->
+<footer th:replace="fragments :: footer"></footer>
+
+</body>
+</html>
