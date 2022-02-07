@@ -27,34 +27,28 @@ Although you can use them, for a more unique website, replace these images with 
     <section class="content">
         <div class="container">
             <div class="row">
-                <table id="partners">
-                    <tr>
-                        <th>NAME</th>
-                        <th>ADDRESS</th>
-                        <th>LINK</th>
-                        <th>PRODUCTS</th>
-                    </tr>
-                    <tr th:each="partner : ${partners}">
-                        <td th:text="${partner.name}">PartnerName</td>
-                        <td th:text="${partner.street + ' ' + partner.houseNumber + ', ' + partner.zipCode + ' ' + partner.city}">PartnerAddress</td>
-                        <td th:text="${partner.link}">PartnerEmail</td>
-                        <td>
-                            <p th:each="product : ${partner.products}">
-                                <span th:text="${product.name}">ProductName</span>
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content 2 -->
-    <section class="content">
-        <div class="container">
-            <div class="row">
+                <div>
+                    <table id="partners">
+                        <tr>
+                            <th>NAME</th>
+                            <th>ADDRESS</th>
+                            <th>EMAIL</th>
+                            <th>PRODUCTS</th>
+                        </tr>
+                        <tr th:each="partner : ${partners}">
+                            <td th:text="${partner.name}">PartnerName</td>
+                            <td th:text="${partner.street + ' ' + partner.houseNumber + ', ' + partner.zipCode + ' ' + partner.city}">PartnerAddress</td>
+                            <td th:text="${partner.email}">PartnerEmail</td>
+                            <td>
+                                <p th:each="product : ${partner.products}">
+                                    <span th:text="${product.name}">ProductName</span>
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
                 <div id="map"></div>
-                    <script>
+                <script>
                         function initMap() {
                             new google.maps.Map(document.getElementById('map'), {
                                 center: {lat: 52.378, lng: 4.897},
@@ -63,8 +57,17 @@ Although you can use them, for a more unique website, replace these images with 
                             });
                         }
                     </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxQDbU3tw_bIJr6Yj-mMp7AXoBdrLx_8A&callback=initMap" defer></script>
-                </div>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxQDbU3tw_bIJr6Yj-mMp7AXoBdrLx_8A&callback=initMap" defer></script>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content 2 -->
+    <section class="content">
+        <div class="container">
+            <div class="row">
+
             </div>
         </div>
     </section>

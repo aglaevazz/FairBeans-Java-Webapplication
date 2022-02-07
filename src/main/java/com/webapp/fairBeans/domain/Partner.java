@@ -16,7 +16,7 @@ public class Partner {
     private String houseNumber;
     private String zipCode;
     private String city;
-    private String link;
+    private String email;
 
     @ManyToMany(mappedBy = "partners")
     private Set<Product> products = new HashSet<>();
@@ -24,13 +24,13 @@ public class Partner {
     public Partner() {
     }
 
-    public Partner(String name, String street, String houseNumber, String zipCode, String city, String link) {
+    public Partner(String name, String street, String houseNumber, String zipCode, String city, String email) {
         this.name = name;
         this.street = street;
         this.houseNumber = houseNumber;
         this.zipCode = zipCode;
         this.city = city;
-        this.link = link;
+        this.email = email;
     }
 
     public Long getId() {
@@ -81,12 +81,12 @@ public class Partner {
         this.city = city;
     }
 
-    public String getLink() {
-        return link;
+    public String getEmail() {
+        return email;
     }
 
-    public void setLink(String link) {
-        this.link = link;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Set<Product> getProducts() {
@@ -106,7 +106,7 @@ public class Partner {
                 ", houseNumber='" + houseNumber + '\'' +
                 ", zipCode='" + zipCode + '\'' +
                 ", city='" + city + '\'' +
-                ", link='" + link + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 
