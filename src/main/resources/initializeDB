@@ -22,3 +22,14 @@ VALUES
 	('Beans and Milk', 'Alabastarroad', '2', '6548', 'Moldue', 'www.beans_and_milk.com'),
 	('Creamy', 'Redlane', '66', '5332', 'Pelikan', 'www.creamy.com');
 
+CREATE TABLE products(
+	id serial primary key,
+	name character varying(200) NOT NULL,
+	description character varying(600)
+);
+
+INSERT INTO products (name, description)
+VALUES
+	('colombian blond roast', 'Velvety coffee with a note of caramel'),
+	('diamond blend', 'Keeps you awake through the longest days');
+
