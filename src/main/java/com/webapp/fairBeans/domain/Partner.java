@@ -1,20 +1,37 @@
 package com.webapp.fairBeans.domain;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@Table(name = "partners")
 public class Partner {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String name;
     private String street;
     private String houseNumber;
     private String zipCode;
     private String city;
     private String link;
+
+    @ManyToMany(mappedBy = "partners")
+    private Set<Product> products = new HashSet<>();
+
+    public Partner() {
+    }
+
+    public Partner(String name, String street, String houseNumber, String zipCode, String city, String link) {
+        this.name = name;
+        this.street = street;
+        this.houseNumber = houseNumber;
+        this.zipCode = zipCode;
+        this.city = city;
+        this.link = link;
+    }
 
     public Long getId() {
         return id;
@@ -72,6 +89,14 @@ public class Partner {
         this.link = link;
     }
 
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+    }
+
     @Override
     public String toString() {
         return "Partner{" +
@@ -83,5 +108,20 @@ public class Partner {
                 ", city='" + city + '\'' +
                 ", link='" + link + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Partner partner = (Partner) o;
+
+        return id != null ? id.equals(partner.id) : partner.id == null;
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
     }
 }
