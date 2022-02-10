@@ -23,7 +23,16 @@ Although you can use them, for a more unique website, replace these images with 
         </div>
     </section>
 
-    <!-- Content 1 -->
+    <!-- search button -->
+    <div class="content">
+        <h2 align="center">Search our Partner Stores</h2>
+        <form align="center" th:action="@{/partners}" method="get">
+            <input type="text" name="area" th:value="${area}" placeholder="zip code / city" size="50">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- partners table/map -->
     <section class="content">
         <div class="container">
             <div class="row">
@@ -59,15 +68,6 @@ Although you can use them, for a more unique website, replace these images with 
                     </script>
                 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxQDbU3tw_bIJr6Yj-mMp7AXoBdrLx_8A&callback=initMap" defer></script>
             </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Content 2 -->
-    <section class="content">
-        <div class="container">
-            <div class="row">
-
             </div>
         </div>
     </section>
