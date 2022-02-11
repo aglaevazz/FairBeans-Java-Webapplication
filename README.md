@@ -6,11 +6,12 @@ The application connects to a database where distribution partners and products 
 This project is the base for a new enterprise. The real purpose is hidden to protect the new company until launch.
 
 ### Todo:
-* Add login for managers and functionality to add products and partners.
+* Add functionality to add products and partners.
+* Add login for managers to access this functionality.
 * Add login for partners to display their current contract and request changes, etc.
 * Display partners in Google Maps plugin.
-* improve design and text.
-* add unit tests for controller and repository layer
+* Improve design and text.
+* Add unit tests for controller layer and repository layer
 
 ### Technologies used:
 * Java 15
