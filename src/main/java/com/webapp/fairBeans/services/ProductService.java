@@ -1,8 +1,11 @@
 package com.webapp.fairBeans.services;
 
+import com.webapp.fairBeans.domain.Product;
 import com.webapp.fairBeans.repositories.ProductRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+
+import java.util.List;
 
 @Service
 public class ProductService {
@@ -13,7 +16,7 @@ public class ProductService {
         this.productRepository = productRepository;
     }
 
-    public void getProducts(Model model) {
-        model.addAttribute("products", productRepository.findAll());
+    public List<Product> getProducts() {
+        return (List<Product>) productRepository.findAll();
     }
 }

@@ -1,8 +1,12 @@
 package com.webapp.fairBeans.services;
 
+import com.webapp.fairBeans.domain.Partner;
 import com.webapp.fairBeans.repositories.PartnerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.ui.Model;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 public class PartnerService {
@@ -13,12 +17,12 @@ public class PartnerService {
         this.partnerRepository = partnerRepository;
     }
 
-    public void getPartners(String area, Model model) {
+    public List<Partner> getPartners(String area) {
         if (area == null) {
-            model.addAttribute("partners", partnerRepository.findAll());
+            return (List<Partner>) partnerRepository.findAll();
         }
         else {
-            model.addAttribute("partners", partnerRepository.findByArea(area));
+            return (List<Partner>) partnerRepository.findByArea(area);
         }
     }
 }
