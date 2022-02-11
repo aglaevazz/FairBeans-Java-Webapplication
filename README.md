@@ -2,8 +2,7 @@
 
 ### Description:
 This is a web application for the fictitious company FairBeans which distributes biological fair trade coffee beans.
-The application connects to a database where distribution partners and products are stored. Partners and products are mapped by a many to many relationship.
-This project is the base for a new enterprise. The real purpose is hidden to protect the new company until launch.
+The application connects to a database where products and distribution partners are stored. Partners and products are mapped by a many to many relationship. Partners can be searched by zipcode or city and displayed with the products they sell. This project is the base for a new enterprise. The real purpose is hidden to protect the new company until launch.
 
 ### Todo:
 * Add functionality to add products and partners.
