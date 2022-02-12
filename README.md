@@ -10,7 +10,7 @@ The application connects to a database where products and distribution partners 
 * Add login for partners to display their current contract and request changes, etc.
 * Display partners in Google Maps plugin.
 * Improve design and text.
-* Add unit tests for controller layer and repository layer
+* Add integration tests for controller layer and repository layer
 
 ### Technologies used:
 * Java 15
