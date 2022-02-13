@@ -1,5 +1,6 @@
 package com.webapp.fairBeans.services;
 
+import com.webapp.fairBeans.domain.Partner;
 import com.webapp.fairBeans.domain.Product;
 import com.webapp.fairBeans.repositories.ProductRepository;
 import org.springframework.stereotype.Service;
@@ -18,5 +19,10 @@ public class ProductService {
 
     public List<Product> getProducts() {
         return (List<Product>) productRepository.findAll();
+    }
+
+    public void addProduct(String name, String description) {
+        Product product = new Product(name, description);
+        productRepository.save(product);
     }
 }

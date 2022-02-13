@@ -2,9 +2,7 @@ package com.webapp.fairBeans.services;
 
 import com.webapp.fairBeans.domain.Partner;
 import com.webapp.fairBeans.repositories.PartnerRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -22,7 +20,12 @@ public class PartnerService {
             return (List<Partner>) partnerRepository.findAll();
         }
         else {
-            return (List<Partner>) partnerRepository.findByArea(area);
+            return partnerRepository.findByArea(area);
         }
+    }
+
+    public void addPartner(String name, String street, String houseNumber, String zipCode, String city, String email) {
+        Partner partner = new Partner(name, street, houseNumber, zipCode, city, email);
+        partnerRepository.save(partner);
     }
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--products-->
+<!-- Template by Quackit.com -->
+<!-- Images by various sources under the Creative Commons CC0 license and/or the Creative Commons Zero license.
+Although you can use them, for a more unique website, replace these images with your own. -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments :: html_head"></head>
+
+<body>
+<!-- Navigation -->
+<nav th:replace="fragments :: my_navigation"></nav>
+
+
+<!-- intro -->
+<section class="intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <span class="glyphicon glyphicon-cloud" style="font-size: 60px"></span>
+                <h2 class="section-heading" th:if="${message}" th:text="${message}"></h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- search button -->
+<div class="content">
+    <h2 align="center">Add a Product</h2>
+    <form align="center" th:action="@{/product/add/success}" method="post">
+
+        <label for="name">Company Name:</label><br>
+        <input type="text" id = name name="name" th:value="${name}" placeholder="Name" size="50"><br>
+
+        <label for="description">Description:</label><br>
+        <input type="text" id="description" name="description" th:value="${description}" placeholder="Description" size="50"><br><br>
+
+        <button type="submit">Add Product</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer th:replace="fragments :: footer"></footer>
+
+</body>
+
+</html>
