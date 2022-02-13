@@ -34,7 +34,7 @@ public class PartnerController {
                            @RequestParam String zipCode, @RequestParam String city, @RequestParam String email,
                            Model model) {
         partnerService.addPartner(name, street, houseNumber, zipCode, city, email);
-        model.addAttribute("message", String.format("Partner %s had been added.", name));
+        model.addAttribute("message", String.format("Partner %s has been added.", name));
         return "add-partner";
     }
 }

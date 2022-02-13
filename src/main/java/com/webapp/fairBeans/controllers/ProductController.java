@@ -36,7 +36,7 @@ public class ProductController {
     @RequestMapping(value="/product/add/success", method=RequestMethod.POST)
     public String addPartner(@RequestParam String name, @RequestParam String description, Model model) {
         productService.addProduct(name, description);
-        model.addAttribute("message", String.format("Product %s had been added.", name));
+        model.addAttribute("message", String.format("Product %s has been added.", name));
         return "add-product";
     }
 }
