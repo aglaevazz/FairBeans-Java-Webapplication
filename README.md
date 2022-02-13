@@ -29,3 +29,5 @@ The application connects to a database where products and distribution partners 
 ![demo image](/src/main/resources/static/images/home-demo-3.png)
 ![demo image](src/main/resources/static/images/home-demo-4.png)
 ![demo image](/src/main/resources/static/images/partners-demo.png)
+![demo image](/src/main/resources/static/images/add-partners-demo.png)
+
