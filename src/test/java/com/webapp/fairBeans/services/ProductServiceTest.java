@@ -24,6 +24,7 @@ class ProductServiceTest {
     @InjectMocks
     private ProductService productService;
 
+    private Product productA;
     private List<Product> products;
 
     @BeforeEach
@@ -37,5 +38,12 @@ class ProductServiceTest {
     public void getProductsAreaIsNull() {
         when(productRepository.findAll()).thenReturn(products);
         assertEquals(products, productService.getProducts());
+    }
+
+    @Test
+    public void addProduct() {
+        when(productRepository.save(productA)).thenReturn(productA);
+        productRepository.save(productA);
+        assertEquals(productA, productRepository.save(productA));
     }
 }

@@ -24,6 +24,7 @@ class PartnerServiceTest {
     @InjectMocks
     private PartnerService partnerService;
 
+    private Partner partnerA;
     private List<Partner> partners;
 
     @BeforeEach
@@ -49,5 +50,12 @@ class PartnerServiceTest {
         when(partnerRepository.findByArea("zip")).thenReturn(partners);
         List<Partner> partnersResult = partnerService.getPartners("zip");
         assertEquals(partners, partnerService.getPartners(null));
+    }
+
+    @Test
+    public void addPartner() {
+        when(partnerRepository.save(partnerA)).thenReturn(partnerA);
+        partnerRepository.save(partnerA);
+        assertEquals(partnerA, partnerRepository.save(partnerA));
     }
 }
